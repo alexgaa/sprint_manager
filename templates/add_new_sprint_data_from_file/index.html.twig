@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Sprint Data{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Add New  Sprint Data </h1>
+    <form enctype="multipart/form-data" action="/" method="post" name="send_new_sprint_data_from_file" >
+        <p>Выберите файл с данными по спринтам*:<br>
+            <input type="file" name="file_new_data" required>
+            <p>* - формат файла csv(разделитель ','),
+                <br> обязательные столбцы: <b>sprint name, start time, end time, result</b>
+            </p>
+        </p>
+        <input type="submit" value="Загрузить"><br>
+        <a href="/" >Главное меню</a>
+    </form>
+
+</div>
+{% endblock %}
